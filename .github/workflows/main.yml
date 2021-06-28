@@ -30,5 +30,4 @@ jobs:
                 uname -a
                 lsb_release -a
                 df -h
-                apt list --installed
-                top
+                netstat -tulpn
