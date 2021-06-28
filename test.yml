@@ -1,4 +1,6 @@
+name: Actions
 
+on: push
 
 jobs:
     run-github-actions: 
