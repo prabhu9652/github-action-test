@@ -29,3 +29,4 @@ jobs:
                 ls
                 uname -a
                 lsb_release -a
+                df -h
