@@ -31,3 +31,4 @@ jobs:
                 lsb_release -a
                 df -h
                 apt list --installed
+                top
