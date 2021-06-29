@@ -34,3 +34,4 @@ jobs:
                 mpstat
                 iostat
                 free -h
+                cat /proc/meminfo
