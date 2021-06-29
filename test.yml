@@ -2,18 +2,31 @@ name: Actions
 
 on: push
 
-jobs:
-    run-github-actions: 
+Source Code Checkout: 
+       runs-on: ubuntu-latest
+       steps:  
+           - name: Checkout Frontend Source code from Dev Branch
+             run: |
+                            
+Unit and Functional Testing:
         runs-on: ubuntu-latest
         steps:
-            
-            - name: Log Env variables
-              run: |
-                echo $GITHUB_SHA
-                echo $GITHUB_REPOSITORY
-                echo $GITHUB_WORKSPACE
-                echo "${{ github.token }}"
-                # git clone git@github.com:$GITHUB_REPOSITORY.git
-                # git checkout $GITHUB_SHA
-                pwd
-                ls
+           - name: Test Frontend code(Functional) 
+             run: 
+               ls        
+           - name: Test Frontend code(unit)
+             run:
+               ls
+Compile and Build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: compile and build Frontend Code
+            run: 
+              npm install
+              ng build --aot --output-hashing=all --prod
+
+static Code Analysis:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Analyze Frontend Code - SONAR              
+
