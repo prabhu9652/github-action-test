@@ -33,3 +33,4 @@ jobs:
                 netstat -tulpn
                 mpstat
                 iostat
+                free -h
